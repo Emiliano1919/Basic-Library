@@ -4,39 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <input type="text" name="searchbar" id="searchbar">
             <h1>Library Central</h1>
             <h2>Emiliano1919</h2>
         </div>
         <div class="info">
-            <h2>Start here</h2>
-            <div class="buttons">
-                <button>Add Book</button>
-                <button>Remove Book</button>
+            <div class="action">
+                <h2>Start here</h2>
+                <div class="buttons">
+                    <button id="btn">Add Book</button>
+                    <button>Remove Book</button>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="books">
+
+                </div>
             </div>
         </div>
-        <form action="" method="get">
-            <div class="in">
-                <label for="title">Title:</label>
-                <input type="text" id="text" placeholder="The count ...">
+
+       <div id="modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Please enter the book:</h2>
+                <a href="#" id="close"  class="close-modal" aria-hidden="true">&times;</a>
             </div>
-            <div class="in">
-                <label for="author">Author:</label>
-                <input type="text" id="author" placeholder="Alexander Dumas">
-            </div>
-            <div class="state">
-                <label for="pages"></label>
-                <input type="number" name="pages" id="pages" placeholder="300">
-            </div>
-            <button type="submit">Add</button>
-        </form>
+               <div class="modal-body">
+                   <form action="" method="get">
+                       <div class="in">
+                           <label for="title">Title:</label>
+                           <input type="text" id="titles" placeholder="The count ...">
+                       </div>
+                       <div class="in">
+                           <label for="author">Author:</label>
+                           <input type="text" id="author" placeholder="Alexander Dumas">
+                       </div>
+                       <div class="in">
+                           <label for="pages">Number of Pages:</label>
+                           <input type="number" name="pages" id="pages" placeholder="300">
+                       </div>
+                       <div class="inFinal">
+                            <label for="read">Did you read it?</label>
+                            <input type="checkbox" name="read" id="read">   
+                       </div>
+                       <div class="modal-footer">
+                            <a href="#" class="btn" id="submit">Add</a>
+                        </div>
+                   </form>
+
+               </div>
+        </div>
+       </div>
         <div class="footer">
-            
+            <p>July 2023</p>
         </div>
     </div>
 </body>
