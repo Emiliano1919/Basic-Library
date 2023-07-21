@@ -78,6 +78,7 @@ table {
 	grid-template-rows: 6rem auto;
 }
 .action{
+	grid-row: 1/2;
 	display: grid;
 	align-items: start;
     justify-content: center;
@@ -142,7 +143,7 @@ In this section I used the codepen from https://codepen.io/nodws/pen/VwpbeX with
 	margin-left: -200px;
 	text-align:center;
 	position: fixed;
-	left: 50%;
+	left: 54%;
 	top: -100%;
 	z-index: 11;
 	width: 1fr;
@@ -248,4 +249,51 @@ In this section I used the codepen from https://codepen.io/nodws/pen/VwpbeX with
 
 a:link, a:visited {
 	text-decoration: none;
+  }
+
+
+  /*Book box */
+  .books{
+	grid-row: 2/3;
+	display: grid;
+	grid-template-columns: repeat(3,3fr);
+	grid-template-rows: 3fr 3fr;
+	gap: 15px;
+  }
+  .box{
+	background-color: lightgray;
+	border: none;
+	box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	color: black;
+	width: 8rem;
+	height: 13rem;
+	display: grid;
+	justify-items: center;
+    align-items: center;
+  }
+
+  .box p, .box div{
+	background-color: rgb(219, 219, 219);
+	height: minmax(1.5rem,5rem);
+	width: 88px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	margin: 5px;
+  }
+
+  body {
+	font-family: 'Roboto', sans-serif;
+  }
+
+  .red{
+	background-color: red;
+	color: white;
+  }
+  
+  .green{
+	background-color: green;
+	color: white;
   }
